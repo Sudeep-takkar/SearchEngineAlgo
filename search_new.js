@@ -40,9 +40,9 @@ for(var a=0; a<pages.length; a++){
 	for(var b=0; b<queries.length; b++){
 		for(var j=0; j<pages[a].length; j++){
 			for(var k=0; k<queries[b].length; k++){
-				if(pages[a][j] == queries[b][k]){
+				if(pages[a][j].toUpperCase() === queries[b][k].toUpperCase()){
 					//console.log('j:' + j + " k:" + k + " a:" + a + " b:" + b);
-					//console.log(pages[a][j] + " : " + queries[b][k]);
+					console.log(pages[a][j] + " : " + queries[b][k]);
 					if(weight[b][a] != (8-k)*(8-j))	{ //for use case for page: Review Ford , query: Ford Review
 						weight[b][a] += (8-k)*(8-j);
 					}
